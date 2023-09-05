@@ -61,7 +61,9 @@ Issuer.discover(
         scope: "read:sample",
       })
       .then((response) => {
-        console.log(response);
+        client.userinfo(response.access_token).then((userinfo) => {
+          console.log("User Info:", userinfo);
+        });
       })
       .catch((error) => {
         console.error(error);
