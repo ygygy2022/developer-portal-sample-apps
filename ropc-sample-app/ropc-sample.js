@@ -26,7 +26,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-console.log("ibm-verify-sdk ROPC sample application\n\n");
+console.log("openid-client ROPC sample application\n\n");
 
 console.log("Authenticate against");
 console.log(`tenant    : ${process.env.TENANT_URL}`);
@@ -44,6 +44,7 @@ const username = rls.question("username: ");
 const password = rls.question("password: ", { hideEchoBack: true });
 
 // Fetch the OIDC configuration from the well-known endpoint.
+// !!!I couldn't use env here since when I used it some undefined error will be show
 Issuer.discover(
   "https://student-devportal.rel.verify.ibmcloudsecurity.com/v1.0/endpoint/default/.well-known/openid-configuration"
 )
