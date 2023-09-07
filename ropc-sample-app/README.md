@@ -1,7 +1,7 @@
 # ROPC
 
 This sample shows how to use the openid-client for Node.js to:
- - Authenticate a user via openid-client using the the ROPC grant type.
+ - Authenticate a user via IBM Security Verify using the the ROPC grant type.
  - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
 <br>
