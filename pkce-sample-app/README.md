@@ -10,18 +10,20 @@ This sample shows how to use the openid-client for Next.js to:
 
 ## :rocket: Demo the sample app:
 **If you've downloaded a sample application via the developer portal you can skip step one.**
-1. Create a `.env` file with the following variables in place (remove secret if Public Client)
+1. Create a `.env.local` file with the following variables in place (remove secret if Public Client)
 ```
 TENANT_URL=https://your-tenant-name.ice.ibmcloud.com
 CLIENT_ID=a1b2c3d4-abcd-1234-0000-yourid
 CLIENT_SECRET=yoursecret
-FLOW_TYPE=ropc
+REDIRECT_URI=http://localhost:3000/redirect
+FLOW_TYPE=authorization
+RESPONSE_TYPE=code
 SCOPE=openid
 ```
-
-2. `npm install`
-3. `npm run start`
-4. In your CLI follow the prompts to authenticate.
+2. In ./lib/client remove `//` at `//token_endpoint_auth_method: "none"` if not a PKCE flow(none chanlleng code and code verifier required)
+3. `npm install`
+4. `npm run dev`
+5. In your CLI follow the prompts to authenticate.
 
 Following successful authentication, authenticated user information will be returned.
 
