@@ -78,7 +78,6 @@ app.get('/dashboard', (req, res) => {
 	if (!userinfo) {
 	  return res.redirect('/login');
 	}
-	console.log('======== Requesting userInfo claims using valid token');
 	res.render('dashboard', {userInfo :userinfo});
   });
   
