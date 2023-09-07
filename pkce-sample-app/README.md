@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PKCE
 
-## Getting Started
+This sample shows how to use the openid-client for Next.js to:
+ - Authenticate a user via openid-client using the the PKCE grant type.
+ - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+![screenshot](screenshot.png)
+
+## :rocket: Demo the sample app:
+**If you've downloaded a sample application via the developer portal you can skip step one.**
+1. Create a `.env` file with the following variables in place (remove secret if Public Client)
+```
+TENANT_URL=https://your-tenant-name.ice.ibmcloud.com
+CLIENT_ID=a1b2c3d4-abcd-1234-0000-yourid
+CLIENT_SECRET=yoursecret
+FLOW_TYPE=ropc
+SCOPE=openid
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. `npm install`
+3. `npm run start`
+4. In your CLI follow the prompts to authenticate.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Following successful authentication, authenticated user information will be returned.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## License
 
-## Learn More
+The MIT License (MIT)
 
-To learn more about Next.js, take a look at the following resources:
+Copyright (c) 2021 - IBM Corp.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
