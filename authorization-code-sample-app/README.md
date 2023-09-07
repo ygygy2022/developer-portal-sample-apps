@@ -15,7 +15,6 @@ This sample shows how to use the openid-client to
 4. npm run start/ npm run dev
 5. navigate to `http://localhost:{PORT}`
 
-For more details how this application works visit the [IBM Security Documentation Hub](https://docs.verify.ibm.com/verify/docs/authorization-code-example#introduction)
 ## License
 
 The MIT License (MIT)
