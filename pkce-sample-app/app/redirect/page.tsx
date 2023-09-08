@@ -24,5 +24,10 @@ export default function Page(props: Props) {
     fetchAuth();
   }, [code]);
 
-  return <div>Redirecting...</div>;
+  return(  
+  <div>
+    <h1>Authorizating...</h1>
+    <h2>Please wait...</h2>
+  </div>
+  );
 }
