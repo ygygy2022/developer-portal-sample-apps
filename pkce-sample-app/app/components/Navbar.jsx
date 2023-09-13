@@ -5,10 +5,10 @@ export default function Navbar(){
         <h1 class= "mb-2 uppercase font-bold">PKCE flow sample app.</h1>
         <p class="mb-2">The sample app is using <span class="text-blue-600"
         ><Link 
-        href="https://www.npmjs.com/package/openid-client?activeTab=readme">
+        href="https://www.npmjs.com/package/openid-client?activeTab=readme" target="_blank">
             openid-client
             </Link>
-            </span>
+        </span>
         </p>
     </nav> 
     )
