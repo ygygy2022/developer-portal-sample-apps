@@ -8,9 +8,8 @@ type Props = {
 };
 
 export default function Page(props: Props) {
-  const code = props.searchParams?.code;
-
   useEffect(() => {
+    const code = props.searchParams?.code;
     async function fetchAuth() {
       const response = await fetch(`/api/auth?code=${code}`, { method: "GET" });
       const data = await response.json();
@@ -22,7 +21,7 @@ export default function Page(props: Props) {
       }
     }
     fetchAuth();
-  }, [code]);
+  }, []);
 
   return(  
   <div className="pt-12">
