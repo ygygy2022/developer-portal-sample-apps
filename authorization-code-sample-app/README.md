@@ -1,5 +1,5 @@
 # Node sample application using Authorization grant type
-This sample shows how to use the openid-client to
+This sample shows how to use the openid-client library to
 - Authenticate a user via IBM Security Verify
 - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
