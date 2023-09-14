@@ -12,19 +12,26 @@ export async function GET(request: Request) {
     const url = `http://localhost:3000/redirect?code=${code}`;
     const client = await setUpOIDC();
     const params = client.callbackParams(url);
-    const userJWT = await client
+    const access_token = await client
       .callback(process.env.REDIRECT_URI, params, {
         nonce,
         code_verifier,
+      }).then((userJWT)=>{
+        return userJWT.access_token;
       })
       .catch((err) => {
         console.log(err.error_description);
-        redirect("/");
+        return 'error'
       });
-
-    const access_token = userJWT.access_token;
+    
+    if(access_token != 'error')
+    {
+      var result = true;
+    }else{
+      var result = false
+    }
     // prettier-ignore
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: result }), {
       status: 200, // HTTP status code for success
       headers: {
         "Content-Type": "application/json",
