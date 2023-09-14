@@ -21,7 +21,8 @@ export default async function Page() {
           Below is the information retrieved from the <code>userInfo</code>{" "}
           endpoint for the authenticated user.
         </p>
-        <table className="border-collapse border border-slate-400 table-auto text-left max-w-sm min-h-12" >
+        <br />
+        <table className="border-collapse border border-slate-400 table-auto text-left min-w-fit min-h-16 text-xl" >
           <thead className ="bg-black text-white ">
             <tr>
               <th className="border border-slate-500">User claims</th>
@@ -31,13 +32,14 @@ export default async function Page() {
           <tbody>
             {Object.keys(userInfo).map((key) => (
               <tr key={key} className="border border-slate-500">
-                <td className="border border-slate-500">{key}</td>
-                <td className="border border-slate-500">{String(userInfo[key])}</td>
+                <td className="border border-slate-500 font-bold pl-1 pr-8">{key}</td>
+                <td className="border border-slate-500 pl-1 pr-8 text-slate-500">{String(userInfo[key])}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        <a href="/api/logout">Logout</a>
+        <br />
+        <a href="/api/logout" className="bg-blue-600 hover:bg-blue-700 text-white text-xl py-2 px-4 rounded">Logout</a>
       </div>
     );
   }
