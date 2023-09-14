@@ -13,7 +13,7 @@ This sample shows how to use the openid-client for Node.js to:
 1. Configure your `.env` file variables. You can refer to the `.env.example` file with the required variables to run this sample.
 2. npm install
 3. npm start
-4. navigate to `http://localhost:{PORT}` in your browser and follow the on screen directions to authenticate your app using the device flow authentication grant type.
+4. navigate to `http://localhost:3000` in your browser and follow the on screen directions to authenticate your app using the device flow authentication grant type.
 <br><br>
 ---
 <br>
