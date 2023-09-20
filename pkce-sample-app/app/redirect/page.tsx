@@ -26,7 +26,7 @@ export default function Page(props: Props) {
   return(  
   <div className="pt-12">
     <div className="animate-pulse flex space-x-4 ">
-    <h1 >Authorizating</h1>
+    <h1>Authorizing...</h1>
   </div>
     </div>
   );
