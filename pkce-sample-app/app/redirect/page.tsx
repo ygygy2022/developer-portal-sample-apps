@@ -13,7 +13,6 @@ export default function Page(props: Props) {
     async function fetchAuth() {
       const response = await fetch(`/api/auth?code=${code}`, { method: "GET" });
       const data = await response.json();
-
       if (data.success) {
         window.location.href = "/dashboard";
       } else {

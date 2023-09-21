@@ -11,31 +11,26 @@ export async function GET(request: Request) {
     const url = `http://localhost:3000/redirect?code=${code}`;
     const client = await setUpOIDC();
     const params = client.callbackParams(url);
-    const access_token = await client
+    const response = await client
       .callback(process.env.REDIRECT_URI, params, {
         nonce,
         code_verifier,
       }).then((userJWT)=>{
-        return userJWT.access_token;
+          return new Response(JSON.stringify({ success: true }), {
+          status: 200, // HTTP status code for success
+          headers: {
+            "Content-Type": "application/json",
+            "Set-Cookie": `token=${userJWT.access_token as string};path=/;httponly`,
+          },
+        });
       })
       .catch((err) => {
         console.log(err.error_description);
-        return 'error'
+        return new Response(JSON.stringify({ success: false }), {
+          status: 401, // HTTP status code for failed
+        });
       });
-    
-    if(access_token != 'error')
-    {
-      var result = true;
-    }else{
-      var result = false
-    }
     // prettier-ignore
-    return new Response(JSON.stringify({ success: result }), {
-      status: 200, // HTTP status code for success
-      headers: {
-        "Content-Type": "application/json",
-        "Set-Cookie": `token=${access_token as string};path=/;httponly`,
-      },
-    });
+    return response;
   }
 }
