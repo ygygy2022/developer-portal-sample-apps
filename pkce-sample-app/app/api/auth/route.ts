@@ -3,7 +3,6 @@ import {
   setUpOIDC,
   codeVerifier as code_verifier,
 } from "@/app/lib/client";
-import { redirect } from "next/navigation";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
