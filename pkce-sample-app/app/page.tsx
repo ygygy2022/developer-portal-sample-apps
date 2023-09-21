@@ -1,10 +1,10 @@
+//login page
 "use client";
 import Link from "next/link";
 import { AuthURL } from "./lib/authUrl";
-//change for create pull request
+
 export default function Home() {
   const authorizationUrl = AuthURL();
-
   return (
     <div>
       <h3 className="pb-6 pt-4">The sample app demonstrates 

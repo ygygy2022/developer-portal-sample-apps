@@ -1,4 +1,5 @@
 import { Issuer, generators } from "openid-client";
+// The function to generate client which is a clientBase property by using issuer.Client function
 export async function setUpOIDC() {
   const ibmIssuer = await Issuer.discover(
     "https://student-devportal.rel.verify.ibmcloudsecurity.com/oauth2/.well-known/openid-configuration"
@@ -14,6 +15,7 @@ export async function setUpOIDC() {
   return client;
 }
 
+// Generate var for PKCE flow
 export const codeVerifier = generators.codeVerifier();
 export const nonce = generators.nonce();
 export const codeChallenge = generators.codeChallenge(codeVerifier);

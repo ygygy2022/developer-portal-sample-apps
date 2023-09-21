@@ -1,3 +1,5 @@
+// Footer which will always show on the bottom of the page
+
 import Link from "next/link"
 export default function Navbar(){
     return(

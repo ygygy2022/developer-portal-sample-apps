@@ -1,3 +1,4 @@
+// Redirect page
 "use client";
 import React, { useEffect } from "react";
 
@@ -8,6 +9,7 @@ type Props = {
 };
 
 export default function Page(props: Props) {
+  // Fetch api/auth route to set cookie which name is token including assess_Token
   useEffect(() => {
     const code = props.searchParams?.code;
     async function fetchAuth() {

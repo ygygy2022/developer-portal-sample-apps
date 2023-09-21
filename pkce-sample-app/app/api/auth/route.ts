@@ -1,3 +1,4 @@
+// Route to get assess_Token from IBM server and save it in Cookie
 import {
   nonce,
   setUpOIDC,
@@ -5,8 +6,10 @@ import {
 } from "@/app/lib/client";
 
 export async function GET(request: Request) {
+  // Get code from searchParam
   const { searchParams } = new URL(request.url);
   const code = searchParams.get("code");
+  // Try to get assess_Token from IBM server, if get code. If success, generate a respond to save the token, else tell user failed
   if (code != null) {
     const url = `http://localhost:3000/redirect?code=${code}`;
     const client = await setUpOIDC();

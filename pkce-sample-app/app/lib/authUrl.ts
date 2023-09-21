@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
- 
+// Function to fetch api/auth/authURL by POST
 export function AuthURL() {
   const [data, setData] = useState('') 
   useEffect(() => {
