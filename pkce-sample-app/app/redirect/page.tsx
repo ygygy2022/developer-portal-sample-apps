@@ -15,7 +15,7 @@ export default function Page(props: Props) {
       const data = await response.json();
 
       if (data.success) {
-        window.location.href = "/dashborad";
+        window.location.href = "/dashboard";
       } else {
         window.location.href = "/";
       }
