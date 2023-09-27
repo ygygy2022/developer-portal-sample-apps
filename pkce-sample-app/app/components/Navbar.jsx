@@ -6,7 +6,7 @@ export default function Navbar(){
         <h1 className= "mb-2 uppercase font-bold">PKCE flow sample app.</h1>
         <p className="mb-2">The sample app is using <span className="text-blue-600"
         ><Link 
-        href="https://www.npmjs.com/package/openid-client?activeTab=readme" target="_blank">
+        href="https://github.com/panva/node-openid-client/blob/main/docs/README.md" target="_blank" title="NPM OpenID client library">
             openid-client
             </Link>
         </span>
