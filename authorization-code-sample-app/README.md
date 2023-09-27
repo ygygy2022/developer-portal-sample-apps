@@ -1,5 +1,5 @@
 # Node sample application using Authorization grant type
-This sample shows how to use the SDK to
+This sample shows how to use the openid-client library to
 - Authenticate a user via IBM Security Verify
 - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
@@ -12,10 +12,9 @@ This sample shows how to use the SDK to
 1. Copy paste the contents of the `.env.example` file into a `.env` file
 2. Update the environment variables in your `.env` file with the appropriate configuration settings.
 3. npm install
-4. npm run start
-5. navigate to `http://localhost:3000`
+4. npm run start/ npm run dev
+5. navigate to `http://localhost:{PORT}`
 
-For more details how this application works visit the [IBM Security Documentation Hub](https://docs.verify.ibm.com/verify/docs/authorization-code-example#introduction)
 ## License
 
 The MIT License (MIT)
