@@ -8,7 +8,7 @@ export default function Navbar(){
             <p className="text-xs">Visit the IBM Security Verify Documentation Hub for more information about the Authorization code grant with the Proof Key of Code Exchange (PKCE) <span
             className="text-blue-600">
             <Link 
-            href="https://docs.verify.ibm.com/verify/docs/developer-portal" className="font-medium">
+            href="https://docs.verify.ibm.com/verify/docs/developer-portal" className="font-medium" title="IBM Security Verify Doc">
             sample app</Link>.
             </span>
             </p>
