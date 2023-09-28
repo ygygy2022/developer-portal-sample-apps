@@ -1,7 +1,7 @@
 /*
  MIT License
 
-Copyright (c) 2019, 2021 - IBM Corp.
+Copyright (c) 2019, 2023 - IBM Corp.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  and associated documentation files (the "Software"), to deal in the Software without restriction,
@@ -26,14 +26,14 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-console.log("ibm-verify-sdk ROPC sample application\n\n");
+console.log("openid-client ROPC sample application\n\n");
 
 console.log("Authenticate against");
 console.log(`tenant    : ${process.env.TENANT_URL}`);
 console.log(`client ID : ${process.env.CLIENT_ID}\n\n`);
 
 const config = {
-  tenantUrl: process.env.TENANT_URL,
+  issuerUrl: process.env.ISSUER_URL,
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
   flowType: process.env.FLOW_TYPE,
@@ -45,7 +45,7 @@ const password = rls.question("password: ", { hideEchoBack: true });
 
 // Fetch the OIDC configuration from the well-known endpoint.
 Issuer.discover(
-  "https://student-devportal.rel.verify.ibmcloudsecurity.com/v1.0/endpoint/default/.well-known/openid-configuration"
+  config.issuerUrl
 )
   .then((issuer) => {
     const client = new issuer.Client({

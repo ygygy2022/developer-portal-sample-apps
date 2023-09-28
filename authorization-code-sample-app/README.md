@@ -1,35 +1,25 @@
-# ROPC
-
-This sample shows how to use the openid-client for Node.js to:
- - Authenticate a user via IBM Security Verify using the the ROPC grant type.
- - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
+# Node sample application using Authorization grant type
+This sample shows how to use the openid-client library to
+- Authenticate a user via IBM Security Verify
+- Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
 <br>
 
-![screenshot](screenshot.png) 
+![screenshot](screenshot.png)
 
 ## :rocket: Demo the sample app:
-**If you've downloaded a sample application via the developer portal you can skip step one.**
-1. Create a `.env` file with the following variables in place (remove secret if Public Client)
-```
-TENANT_URL=https://your-tenant-name.ice.ibmcloud.com
-CLIENT_ID=a1b2c3d4-abcd-1234-0000-yourid
-CLIENT_SECRET=yoursecret
-FLOW_TYPE=ropc
-SCOPE=openid
-```
-
-2. `npm install`
-3. `npm run start`
-4. In your CLI follow the prompts to authenticate.
-
-Following successful authentication, authenticated user information will be returned.
+**If you've downloaded the sample app from the developer portal you can skip straight to step 3**
+1. Copy paste the contents of the `.env.example` file into a `.env` file
+2. Update the environment variables in your `.env` file with the appropriate configuration settings.
+3. npm install
+4. npm run start/ npm run dev
+5. navigate to `http://localhost:{PORT}`
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2021 - IBM Corp.
+Copyright (c) 2019, 2021 - IBM Corp.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

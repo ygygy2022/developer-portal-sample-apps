@@ -123,6 +123,7 @@ setupOIDC()
     // logout
     app.get("/logout", async (req, res) => {
       // destroy session
+      
       req.session.destroy(() => {
         res.redirect("/");
       });
