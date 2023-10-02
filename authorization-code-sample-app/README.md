@@ -1,5 +1,7 @@
 # Node sample application using Authorization grant type
-This sample shows how to use the openid-client library to
+
+This sample shows how to use the openid-client library for Node.js to
+
 - Authenticate a user via IBM Security Verify
 - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
@@ -8,7 +10,9 @@ This sample shows how to use the openid-client library to
 ![screenshot](screenshot.png)
 
 ## :rocket: Demo the sample app:
+
 **If you've downloaded the sample app from the developer portal you can skip straight to step 3**
+
 1. Copy paste the contents of the `.env.example` file into a `.env` file
 2. Update the environment variables in your `.env` file with the appropriate configuration settings.
 3. npm install
