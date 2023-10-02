@@ -1,16 +1,20 @@
 # ROPC
 
 This sample shows how to use the openid-client for Node.js to:
- - Authenticate a user via IBM Security Verify using the the ROPC grant type.
- - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
+
+- Authenticate a user via IBM Security Verify using the the ROPC grant type.
+- Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
 <br>
 
-![screenshot](screenshot.png) 
+![screenshot](screenshot.png)
 
 ## :rocket: Demo the sample app:
+
 **If you've downloaded a sample application via the developer portal you can skip step one.**
+
 1. Create a `.env` file with the following variables in place (remove secret if Public Client)
+
 ```
 TENANT_URL=https://your-tenant-name.ice.ibmcloud.com
 CLIENT_ID=a1b2c3d4-abcd-1234-0000-yourid
@@ -29,7 +33,7 @@ Following successful authentication, authenticated user information will be retu
 
 The MIT License (MIT)
 
-Copyright (c) 2021 - IBM Corp.
+Copyright (c) 2023 - IBM Corp.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
