@@ -20,16 +20,15 @@ app.use(express.urlencoded({ extended: false }));
 
 // load contents of .env into process.env
 require('dotenv').config();
-// 
+// Function for create client 
 async function setUpOIDC(){
-	const issuer = await Issuer.discover('https://student-devportal.rel.verify.ibmcloudsecurity.com/oidc/endpoint/default/.well-known/openid-configuration');
+	const issuer = await Issuer.discover(process.env.TENANT_URL);
 	const client = new issuer.Client({
 		client_id: process.env.CLIENT_ID,
 		client_secret: process.env.CLIENT_SECRET,
 		redirect_uris: process.env.REDIRECT_URI,
 		response_typese:process.env.RESPONSE_TYPE
 	});
-	console.log('client', client)
 	return client;
 }
 
@@ -96,7 +95,7 @@ app.get('/dashboard', (req, res) => {
   });
 
 // Listen PORT
-app.listen  (process.env.PORT, async () => {
+app.listen  (3000, async () => {
 	console.log('Server started');
-	console.log(`Navigate to http://localhost:${process.env.PORT}`);
+	console.log(`Navigate to http://localhost:3000`);
 });
