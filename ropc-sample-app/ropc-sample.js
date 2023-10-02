@@ -44,7 +44,7 @@ const username = rls.question("username: ");
 const password = rls.question("password: ", { hideEchoBack: true });
 
 // Fetch the OIDC configuration from the well-known endpoint.
-Issuer.discover(config.issuerUrl)
+Issuer.discover(config.tenantUrl)
   .then((issuer) => {
     const client = new issuer.Client({
       client_id: config.clientId,
@@ -72,5 +72,5 @@ Issuer.discover(config.issuerUrl)
   });
 
 app.listen(5000, () => {
-  console.log("App listening on port 3000");
+  console.log("App listening on port 5000");
 });
