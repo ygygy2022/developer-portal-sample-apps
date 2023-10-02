@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "watch": "nodemon"
+    "start": "node server.js"
   },
   "author": "Lachlan Ashcroft <lachlan.ashcroft@ibm.com>",
   "contributors": [
@@ -24,13 +23,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "ibm-verify-sdk": "^2.0.7",
     "node-persist": "^3.0.5",
     "openid-client": "^5.4.3",
     "pug": "^3.0.2",
     "socket.io": "^2.4.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
   }
 }

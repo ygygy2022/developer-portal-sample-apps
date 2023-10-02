@@ -44,9 +44,7 @@ const username = rls.question("username: ");
 const password = rls.question("password: ", { hideEchoBack: true });
 
 // Fetch the OIDC configuration from the well-known endpoint.
-Issuer.discover(
-  "https://student-devportal.rel.verify.ibmcloudsecurity.com/v1.0/endpoint/default/.well-known/openid-configuration"
-)
+Issuer.discover(config.issuerUrl)
   .then((issuer) => {
     const client = new issuer.Client({
       client_id: config.clientId,
@@ -74,5 +72,5 @@ Issuer.discover(
   });
 
 app.listen(5000, () => {
-  console.log("App listening on port 5000");
+  console.log("App listening on port 3000");
 });
