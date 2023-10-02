@@ -1,12 +1,12 @@
 # ROPC
 
-This sample shows how to use the openid-client for Node.js to:
+This sample shows how to use the IBM Security Verify SDK for JavaScript to:
  - Authenticate a user via IBM Security Verify using the the ROPC grant type.
  - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
 <br>
 
-![screenshot](screenshot.png) 
+![screenshot](screenshot.png)
 
 ## :rocket: Demo the sample app:
 **If you've downloaded a sample application via the developer portal you can skip step one.**
