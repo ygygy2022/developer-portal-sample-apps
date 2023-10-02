@@ -1,7 +1,7 @@
 # Device Flow
 
-This sample shows how to use the IBM Security Verify SDK for JavaScript to:
-- Authenticate a user via IBM Security Verify using the the device flow authorization grant type.
+This sample shows how to use the openid-client for Node.js to:
+- Authenticate a user via openid-client using the the device flow authorization grant type.
 - Successfully make an API request to `userinfo` endpoint to return the authenticated users details.
 
 <br>
@@ -23,14 +23,13 @@ This sample shows how to use the IBM Security Verify SDK for JavaScript to:
 - Copy the code and goto the provided link to authenticate using the device code or use a secondary device to scan the QR code for a better user experience.
 - The application begins polling the authorization server for a valid access token
 - When the authentication process is complete you can use the valid access token to to call your API and retrieve requested data.
-￼
-The IBM Verify Javascript SDK also supports the ability to manage IBM Verify registration profiles. You can read more about how this is implemented [here](http://developer.ice.ibmcloud.com/verify/javascript/ibm-verify-sdk-object-model/authenticator-context). :rocket:
+
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2019, 2021 - IBM Corp.
+Copyright (c) 2019, 2023 - IBM Corp.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
