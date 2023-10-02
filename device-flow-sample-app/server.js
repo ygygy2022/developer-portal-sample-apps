@@ -41,13 +41,13 @@ app.set("views", path.join(__dirname, "views"));
 //storage.init();
 storage.init();
 
-const port = 5000;
+const port = 3000;
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
 async function setupOIDC() {
   const issuer = await Issuer.discover(
-    "https://student-devportal.rel.verify.ibmcloudsecurity.com/v1.0/endpoint/default/.well-known/openid-configuration"
+    process.env.TENANT_URL
   );
   const client = new issuer.Client({
     client_id: process.env.CLIENT_ID,
@@ -123,7 +123,6 @@ setupOIDC()
     // logout
     app.get("/logout", async (req, res) => {
       // destroy session
-      
       req.session.destroy(() => {
         res.redirect("/");
       });

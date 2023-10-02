@@ -31,6 +31,6 @@
     "app/redirect/page.tsx",
     "app/api/auth/test/route.ts",
     "app/lib/InteractiveButton.js"
-  ],
+, "app/components/header/header.js"  ],
   "exclude": ["node_modules"]
 }
