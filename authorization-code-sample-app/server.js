@@ -87,7 +87,6 @@ app.get("/redirect", async (req, res) => {
   const userinfo = await client.userinfo(tokenSet.access_token);
   req.session.tokenSet = tokenSet;
   req.session.userinfo = userinfo;
-  console.log(userinfo);
   res.redirect("/dashboard");
 });
 
@@ -105,7 +104,6 @@ app.get("/logout", async (req, res) => {
   const client = await setUpOIDC();
   // get token from session
   const token = req.session.tokenSet;
-  console.log(token);
   // check result
   req.session.destroy(() => {
     res.redirect("/");
