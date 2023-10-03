@@ -110,7 +110,7 @@ app.get("/logout", async (req, res) => {
   req.session.destroy(() => {
     res.redirect("/");
   });
-  // logout from OP ? doesn't work
+
   await client.revoke(token.access_token).catch(console.error);
 });
 
