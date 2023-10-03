@@ -26,7 +26,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-console.log("ibm-verify-sdk ROPC sample application\n\n");
+console.log("openid-client ROPC sample application\n\n");
 
 console.log("Authenticate against");
 console.log(`tenant    : ${process.env.TENANT_URL}`);
