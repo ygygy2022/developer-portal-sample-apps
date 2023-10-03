@@ -46,9 +46,7 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http);
 
 async function setupOIDC() {
-  const issuer = await Issuer.discover(
-    process.env.TENANT_URL
-  );
+  const issuer = await Issuer.discover(process.env.TENANT_URL);
   const client = new issuer.Client({
     client_id: process.env.CLIENT_ID,
     client_secret: process.env.CLIENT_SECRET,
@@ -89,10 +87,6 @@ setupOIDC()
       req.session.userCode = deviceCodeResponse.user_code;
       console.log("========= req.session.deviceCode", req.session);
 
-      // io.emit("authInfo", {
-      //   deviceCode: deviceCodeResponse.device_code,
-      //   userCode: deviceCodeResponse.user_code,
-      // });
       //send url to client
       res.render("authorize", {
         userCode: deviceCodeResponse.user_code,
