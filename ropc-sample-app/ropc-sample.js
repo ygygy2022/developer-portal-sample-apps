@@ -44,7 +44,7 @@ const username = rls.question("username: ");
 const password = rls.question("password: ", { hideEchoBack: true });
 
 // Fetch the OIDC configuration from the well-known endpoint.
-Issuer.discover(config.issuerUrl)
+Issuer.discover(config.tenantUrl)
   .then((issuer) => {
     const client = new issuer.Client({
       client_id: config.clientId,
